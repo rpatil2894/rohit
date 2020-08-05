@@ -1,9 +1,10 @@
-version: 2.1
+version: 2
 jobs:
   build:
-    # pre-built images: https://circleci.com/docs/2.0/circleci-images/
-    docker:
-      - image: circleci/node:10-browsers
-    steps:
-      - checkout
-      -run: echo $Name
+    machine:
+      enabled: true
+      image: ubuntu-1604:201903-01 # Available images https://circleci.com/docs/2.0/configuration-reference/#available-machine-images
+      -run:
+        name: echo
+        command: echo $food
+        
