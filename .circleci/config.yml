@@ -1,7 +1,14 @@
-version: 2
-jobs: 
-  docekr: 
-   - image: alpine:3.7
-  steps:
-   - run: echo $food
-        
+version: 2.1
+orbs:
+  slack: circleci/slack@0.1.0
+  heroku: circleci/heroku@0.0.1
+jobs:
+  Hello-World:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - run:
+          name: Hello World
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
