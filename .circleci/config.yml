@@ -1,10 +1,6 @@
 version: 2
-jobs:
-  build:
-    machine:
-      enabled: true
-      image: ubuntu-1604:201903-01 # Available images https://circleci.com/docs/2.0/configuration-reference/#available-machine-images
-      -run:
-        name: echo
-        command: echo $food
+jobs: 
+  docekr: 
+   - image: alpine:3.7
+   - run: echo $food
         
