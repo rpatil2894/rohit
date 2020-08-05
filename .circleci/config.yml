@@ -6,3 +6,4 @@ jobs:
       - image: circleci/node:10-browsers
     steps:
       - checkout
+      -run: echo $Name
