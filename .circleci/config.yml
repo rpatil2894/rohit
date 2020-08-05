@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Hello World
           command: |
-            echo 'Hello World!'
+            echo $food
             echo 'This is the delivery pipeline'
             
 workflows:
